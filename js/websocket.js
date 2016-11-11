@@ -15,10 +15,11 @@
         }
     }
 
-    var wsUri = "ws://localhost:9002";
     var websocket = null;
     initWebSocket();
+
     function initWebSocket() {
+        var wsUri = document.querySelector('input[name="ip"]:checked').value;
         try {
             if (typeof MozWebSocket == 'function')
                 WebSocket = MozWebSocket;
