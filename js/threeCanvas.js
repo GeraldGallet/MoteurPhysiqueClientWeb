@@ -27,7 +27,6 @@ function update() {
     var tmpObject = scene.getObjectByName(engineObjects[i].name);
     if (tmpObject) {
       tmpObject.position.fromArray(engineObjects[i].position);
-      console.log("ICI");
     }
     else {
       var geometry = new THREE.SphereGeometry( 1, 15, 15 );

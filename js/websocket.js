@@ -16,11 +16,9 @@
     }
 
     var websocket = null;
-    initWebSocket();
 
     function initWebSocket() {
         var wsUri = document.querySelector('input[name="ip"]:checked').value;
-        console.log(wsUri);
         try {
             if (typeof MozWebSocket == 'function')
                 WebSocket = MozWebSocket;
@@ -35,7 +33,6 @@
             };
             websocket.onmessage = function (evt) {
                 engineObjects = JSON.parse(evt.data);
-                console.log(engineObjects);
                 debug( evt.data );
             };
             websocket.onerror = function (evt) {
