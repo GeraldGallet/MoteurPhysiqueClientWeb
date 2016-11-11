@@ -29,6 +29,7 @@ function update() {
       tmpObject.position.fromArray(engineObjects[i].position);
     }
     else {
+      console.log("test");
       var geometry = new THREE.SphereGeometry( 1, 15, 15 );
       var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
       var sphere = new THREE.Mesh( geometry, material );
