@@ -20,6 +20,7 @@
 
     function initWebSocket() {
         var wsUri = document.querySelector('input[name="ip"]:checked').value;
+        console.log(wsUri);
         try {
             if (typeof MozWebSocket == 'function')
                 WebSocket = MozWebSocket;
