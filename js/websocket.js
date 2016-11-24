@@ -32,6 +32,7 @@
                 debug("DISCONNECTED");
             };
             websocket.onmessage = function (evt) {
+                console.log(evt.data);
                 engineObjects = JSON.parse(evt.data);
                 debug( evt.data );
             };
